@@ -1,13 +1,16 @@
 // Chiedo di inserire una parola
 let inserisciParola = prompt("Inserisci una parola");
 let parolaInversa = invertiParola(inserisciParola);
+let stampoEsito = document.querySelector(".esito");
 
 console.log(parolaInversa);
 
 if(inserisciParola == parolaInversa){
-    console.log("La parola inserita è palindroma");
+    stampoEsito.innerHTML = "La parola inserita è palindroma!"
+    console.log("La parola " + inserisciParola + " è palindroma");
 } else {
-    console.log("La parola inserita NON è palindroma");
+    stampoEsito.innerHTML = "La parola inserita NON è palindroma!"
+    console.log("La parola " + inserisciParola + " NON è palindroma");
 }
 
 // Funzioni
