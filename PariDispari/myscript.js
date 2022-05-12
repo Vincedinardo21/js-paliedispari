@@ -1,4 +1,6 @@
 let myNumber;
+let stampoEsito = document.querySelector(".esito");
+let stampoSomma = document.querySelector(".somma");
 
 // Scelgo pari o dispari
 let scelta = prompt("Scegli Pari o Dispari");
@@ -17,13 +19,16 @@ console.log("La somma è: " + somma);
 
 // Verifico se la somma è pari o dispari
 let pariDispariResult = pariDispari(somma);
-console.log("la somma è: " + pariDispariResult);
+// console.log("la somma è: " + pariDispariResult);
+stampoSomma.innerHTML = "La somma è: " + pariDispariResult;
 
 // Esito del gioco
 if(pariDispariResult === scelta){
-    console.log("Hai vinto");
+    stampoEsito.innerHTML = "Hai vinto!";
+    // console.log("Hai vinto");
 } else {
-    console.log("Hai perso");
+    stampoEsito.innerHTML = "Hai perso!";
+    // console.log("Hai perso");
 }
 
 // Le mie funzioni
